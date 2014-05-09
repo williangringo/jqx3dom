@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta charset="utf-8">
+<title>jqx3dom example 2</title>
+<script src="http://www.x3dom.org/download/x3dom.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../jquery.jqx3dom.js"></script>
+<script>
+$(function() {
+		var myCanvas = $('#3dcanvas').jqx3dom({
+		width:"320px",
+		height:"320px",
+		background: "#eeffee",
+		showStat:	true,
+		showLog:	true,
+		id:			"x3dElement"
+	});
+	myCanvas.addBox ({x:-1,y:2,z:2});
+});
+</script>	 
+</head>
+<body style="font-family: Helvetica, sans-serif;font-size: 12px;">
+<div><a href="../index.html">Back to index</a></div>
+<h3>Canvas options</h3>
+<div style="float:left;margin:20px;min-height:600px;">
+	<div id="3dcanvas"></div>
+</div>
+<div>
+<!-- ----------------------------------------------- -->
+<xmp>
+
+var myCanvas = $('#3dcanvas').jqx3dom({
+  width:	 "320px",
+  height:	 "320px",
+  background:"#eeffee",
+  showStat:	 true,	// show statistics
+  showLog:	 true,	// show log
+  id:	 "x3dElement"	// custom id for your elelment
+});
+</xmp>
+<!-- ----------------------------------------------- -->
+
+</div>
+</body>
+</html>
