@@ -16,7 +16,7 @@ $(function() {
 	});
 	myCanvas.addSphere ({x:1,y:0,z:0,radius:1,color:'#ff00ff'}); 
 	myCanvas.addBox ({x:1,y:1,z:0,width:1,depth:1,height:1,color:'#efef00'});
-	myCanvas.addCone ({x:1,y:2,z:0,color:'#0000ff'});
+	myCanvas.addCone ({x:1,y:2,z:0,color:'#0000ff',label:'tower top'});
 	myCanvas.addCylinder ({x:1,y:-2,z:0,radius:0.5,height:2,color:'#00aaff'});
 });
 </script>	 
@@ -65,7 +65,7 @@ var myCanvas = $('#3dcanvas').jqx3dom();
 
 myCanvas.addSphere ({x:1,y:0,z:0,radius:1,color:'#ff00ff'}); 
 myCanvas.addBox ({x:1,y:1,z:0,width:1,depth:1,height:1,color:'#efef00'});
-myCanvas.addCone ({x:1,y:2,z:0,color:'#0000ff'});
+myCanvas.addCone ({x:1,y:2,z:0,color:'#0000ff',label:'tower top'});
 myCanvas.addCylinder ({x:1,y:-2,z:0,radius:0.5,height:2,color:'#00aaff'});
 
 // if any of the parameters is ommited, defaults will be used, e.g.

@@ -25,11 +25,28 @@
 	--------------------------------------------------------------------------*/
 	
 	var NODE_COLOR = "#cccccc";
+	var FONT_COLOR = "#000000";
+	var FONT_SIZE = 0.5;
+	
 	// hex to RGB converter
 	function hex2rgb( hex ) {
 		hex = (hex.substr(0,1)=="#") ? hex.substr(1) : hex;
 		return [parseInt(hex.substr(0,2), 16)/255, parseInt(hex.substr(2,2), 16)/255, parseInt(hex.substr(4,2), 16)/255];
 	};	
+	
+	function setLabel ( oAttr ) {
+		var z = oAttr.z;
+		var label = '\
+			<transform translation="' + oAttr.x + ',' + oAttr.y + ',' + ++z + '">\<shape>\
+			<appearance>\
+				<material diffuseColor="'+hex2rgb(oAttr.fontColor)+'" ></material>\
+			</appearance>\
+			<text string="'+oAttr.label+'">\
+				<fontstyle family="'+oAttr.font+'" size="'+oAttr.fontSize+'"></fontstyle>\
+			</text>\
+			</shape></transform>';
+			return label;
+  	}
 	
 	// change existing arguments
 	function setArgs (oDefault, oArg)
@@ -54,40 +71,40 @@
 	/* public functions
 	--------------------------------------------------------------------------*/
 	$.fn.addCylinder = function( oArg) {
-		var oAttr = {x:0,y:0,z:0,radius:1,height:1,color:NODE_COLOR};
+		var oAttr = {x:0,y:0,z:0,radius:1,height:1,color:NODE_COLOR,label:'',font:'Arial',fontColor:FONT_COLOR,fontSize:FONT_SIZE};
 		if (oArg != null) { oAttr = setArgs (oAttr, oArg); }
+		var label = (oAttr.label.length > 0) ? setLabel ( oAttr ) : '';
 		this.find('scene').append($('\
 			<transform translation="' + oAttr.x + ',' + oAttr.y + ',' + oAttr.z + '">\
 			<shape><appearance><material diffuseColor="'+hex2rgb(oAttr.color)+'"></material></appearance><Cylinder radius="'+oAttr.radius+' "height="'+oAttr.height+'"></Cylinder></shape>\
-			</transform>\
-			'));
+			</transform>'+label));
 	};	
 	$.fn.addSphere = function( oArg) {
-		var oAttr = {x:0,y:0,z:0,radius:1,color:NODE_COLOR};
+		var oAttr = {x:0,y:0,z:0,radius:1,color:NODE_COLOR,label:'',font:'Arial',fontColor:FONT_COLOR,fontSize:FONT_SIZE};
 		if (oArg != null) { oAttr = setArgs (oAttr, oArg); }
+		var label = (oAttr.label.length > 0) ? setLabel ( oAttr ) : '';
 		this.find('scene').append($('\
 			<transform translation="' + oAttr.x + ',' + oAttr.y + ',' + oAttr.z + '">\
 			<shape><appearance><material diffuseColor="'+hex2rgb(oAttr.color)+'"></material></appearance><Sphere radius="'+oAttr.radius+'"></Sphere></shape>\
-			</transform>\
-			'));
+			</transform>'+label));
 	};	
 	$.fn.addCone = function( oArg ) {
-		var oAttr = {x:0,y:0,z:0, height:1,bottomRadius:1.0,topRadius:0,color:NODE_COLOR};
+		var oAttr = {x:0,y:0,z:0, height:1,bottomRadius:1.0,topRadius:0,color:NODE_COLOR,label:'',font:'Arial',fontColor:FONT_COLOR,fontSize:FONT_SIZE};
 		if (oArg != null) { oAttr = setArgs (oAttr, oArg); }
+		var label = (oAttr.label.length > 0) ? setLabel ( oAttr ) : '';
 		this.find('scene').append($('\
 			<transform translation="' + oAttr.x + ',' + oAttr.y + ',' + oAttr.z + '">\
 			<shape><appearance><material diffuseColor="'+hex2rgb(oAttr.color)+'"></material></appearance><Cone  height="'+oAttr.height+'" bottomRadius="'+oAttr.bottomRadius+'" topRadius="'+oAttr.topRadius+'"></Cone></shape>\
-			</transform>\
-			'));
+			</transform>'+label));
 	};	
 	$.fn.addBox = function( oArg ) {
-		var oAttr = {x:0,y:0,z:0,width:1,depth:1,height:1,color:NODE_COLOR};
+		var oAttr = {x:0,y:0,z:0,width:1,depth:1,height:1,color:NODE_COLOR,label:'',font:'Arial',fontColor:FONT_COLOR,fontSize:FONT_SIZE};
 		if (oArg != null) { oAttr = setArgs (oAttr, oArg); }
+		var label = (oAttr.label.length > 0) ? setLabel ( oAttr ) : '';
 		this.find('scene').append($('\
 			<transform translation="' + oAttr.x + ',' + oAttr.y + ',' + oAttr.z + '">\
 			<shape><appearance><material diffuseColor="'+hex2rgb(oAttr.color)+'"></material></appearance><Box size="'+oAttr.width+','+oAttr.depth+','+oAttr.height+'"></Box></shape>\
-			</transform>\
-			'));
+			</transform>'+label));
 	};	
 
 	$.fn.jqx3dom.defaults = {

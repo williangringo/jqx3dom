@@ -4,7 +4,7 @@ jqx3dom is X3DOM/HTML5 based 3D interactive graphics plugin for jQuery.
 
 ## Example and usage
 
-Demo and examples in "examples" folder and in [http://www.livereference.org/jqx3dom/](http://www.livereference.org/jqx3dom/)
+Basic usage
 
 ### HTML
 
@@ -51,6 +51,8 @@ var myCanvas = $('#3dcanvas').jqx3dom({
 	id:			"x3dElement"
 });
 ```
+
+Demo and more examples in "examples" folder and in [http://www.livereference.org/jqx3dom/](http://www.livereference.org/jqx3dom/)
 
 ### Copyright
 This software comes with the same license as jQuery. However, x3dom has its own license. Please check at [http://www.x3dom.org/](http://www.x3dom.org/)
