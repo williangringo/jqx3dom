@@ -1,11 +1,10 @@
-# X3DOM/HTML5 based 3D interactive graphics plugin for jQuery
+# 3D interactive graphics for jQuery
 
+jqx3dom is X3DOM/HTML5 based 3D interactive graphics plugin for jQuery
 
-jqx3dom is a jQuery plugin for creating 3D interactive graphics in X3DOM framework.
+## Example and usage
 
-## Example Usage
-
-demo and examples in examples folder and in [http://www.livereference.org/jqx3dom/](http://http://www.livereference.org/jqx3dom/)
+demo and examples in examples folder and in [http://www.livereference.org/jqx3dom/](http://www.livereference.org/jqx3dom/)
 
 ### HTML
 
@@ -36,7 +35,7 @@ $(function() {
 
 ### jQuery
 
-to initialize a canvas:
+to initialize the canvas:
 
 ```js
 // with default options
