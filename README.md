@@ -4,7 +4,7 @@ jqx3dom is X3DOM/HTML5 based 3D interactive graphics plugin for jQuery
 
 ## Example and usage
 
-demo and examples in examples folder and in [http://www.livereference.org/jqx3dom/](http://www.livereference.org/jqx3dom/)
+Demo and examples in "examples" folder and in [http://www.livereference.org/jqx3dom/](http://www.livereference.org/jqx3dom/)
 
 ### HTML
 
