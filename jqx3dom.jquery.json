@@ -1,7 +1,7 @@
 {
   "name": "jqx3dom",
   "title": "3D graphics for jQuery",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "jQuery plugin for creating 3D interactive graphics in X3DOM framework",
   "homepage": "https://github.com/prototype-59/jqx3dom",
   "demo": "http://www.livereference.org/jqx3dom/",

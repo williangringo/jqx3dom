@@ -17,7 +17,7 @@ Demo and examples in "examples" folder and in [http://www.livereference.org/jqx3
 
 <script src="http://www.x3dom.org/download/x3dom.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="jquery.jqx3dom.js"></script>
+<script src="jqx3dom.jquery.js"></script>
 
 <script>
 $(function() { 
