@@ -13,6 +13,10 @@ $(function() {
 		width:"320px",
 		height:"320px",
 		background: "#eeffee",
+		fontFamily: 'Arial',
+		fontSize: .4,
+		ViewpointOrientation: '0,0,0,1',
+		ViewpointPosition: '0,0,10',
 		showStat:	true,
 		showLog:	true,
 		id:			"x3dElement"
@@ -32,9 +36,14 @@ $(function() {
 <xmp>
 
 var myCanvas = $('#3dcanvas').jqx3dom({
-  width:	 "320px",
-  height:	 "320px",
-  background:"#eeffee",
+  width:	 "320px",	// canvas width (default is 150px)
+  height:	 "320px",	// canvas height (default is 150px)
+  sceneAnimation: false,	// animated scene rotation (heavy on CPU)
+  background:"#eeffee",	// canvas background (default is white)r
+  fontFamily: 'Arial',	// default font is 'Sans'
+  fontSize: .4,		// defult font size is 0.5
+  ViewpointOrientation: '0,0,0,1',	// x,y,z,angle rotation
+  ViewpointPosition: '0,0,10',	// position relative to (0,0,0)
   showStat:	 true,	// show statistics
   showLog:	 true,	// show log
   id:	 "x3dElement"	// custom id for your elelment
